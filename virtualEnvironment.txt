@@ -1,0 +1,113 @@
+steps:
+1. install python 3.9.10
+2.add path
+
+3.pip install virtualenvwrapper-win
+-> mkvirtualenv envname
+4.pip freeze -> to check what are the packages installed
+5. to install django :
+    pip install django
+
+6. to create a project in django:
+    django-admin startproject project-name
+
+7. to create the app in django
+    cd project-name
+
+8. to run the server
+    ->python manage.py runserver
+
+9.to create a app inside a subfolder
+    ->django-admin startapp project-name
+
+10. to deactivate the virtual environment
+    ->deactivate
+
+11. to see the list of virtual environment
+    ->workon
+
+12. to select the specific environment from the list of virtual environment
+    ->workon environment-name
+
+
+
+===================================================================
+Django makes use of a directory structure to arrange different parts of web application
+->schedule
+    schedule-> __init.py
+               settings.py
+               urls.py
+               wsgi.py
+               asgi.py
+    manage.py
+      mangae.py:
+                ->it is a command-line utitlity for our project
+                ->the file contains the code for running the server, make migrations... and several commands
+                ->it lets you to interact with your project
+
+    settings.py:
+            -> it is typically used to store configuration information in django
+            -> default database is set here
+
+    __init.py:
+        ->empty file, function of this file tells python interpretor that is directory has package
+
+    urls.py:
+        -> it is used to provide you the address of the particular page
+
+    wsgi.py(Web server gateway interface):
+        ->it is the way how servers interact with the applications
+
+    asgi.py(ASGI works similar to wsgi)
+
+=============================================================================
+
+install xampp server
+if already my sql is installed we have to change the port like ex:3333
+ then start the xampp server 
+Step: 1 – Xammp server create database
+
+Step 2 – In the environment where you have install Django
+
+(in the same environment pip install mysqlclient ==2.2.0)
+
+Step 3 – create a project
+
+Step 4 – settings.py
+
+DATABASES = {
+
+   'default': {
+
+       'ENGINE': 'django.db.backends.mysql',
+
+       'NAME': 'bookmanagement',
+
+       'PORT': '3306',
+
+       'USER': 'root',
+
+       'PASSWORD':'',
+
+       'HOST':'localhost'
+
+   }
+
+}
+
+Write connectivity code
+
+Step5 : py manage.py migrate
+
+
+Step6: Install app : ‘author’
+
+Step7 : Django-admin startapp author
+
+Step8 : models.py structure
+
+Step 9: makemigrations and migrate
+
+
+
+

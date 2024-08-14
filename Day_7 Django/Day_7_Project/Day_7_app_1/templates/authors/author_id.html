@@ -1,0 +1,20 @@
+{%extends "base.html"%}
+{%block page_title%}author details {%endblock%}
+{%block content%}
+<h1>Author details</h1>
+<ul>
+
+
+{% comment %} <li><h1>First_name={{auth.First_name}}</h1></li>
+<li><h1>Last_name={{auth.last_name}}</h1><li>
+<li><h1>Last_name={{auth.city}}</h1><li> {% endcomment %}
+
+<li><h1>First_name={{slug.First_name}}</h1></li>
+<li><h1>Last_name={{slug.last_name}}</h1><li>
+<li><h1>City={{slug.city}}</h1><li>
+
+
+
+
+</ul>
+{%endblock%}
