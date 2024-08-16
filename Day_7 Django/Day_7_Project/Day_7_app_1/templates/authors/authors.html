@@ -1,6 +1,10 @@
+
 {%extends "base.html"%}
-{%block page_title%}author details {%endblock%}
-{%block content%}
+{% load static %}
+{%block page_title%}author details {%endblock %}
+
+{% block css_file %} <link rel='stylesheet' href="{% static 'Day_7_app_1/authors.css' %}">{% endblock  %}
+{% block content %}
 <h1>Author details</h1>
 <ul>
 {%for trash in author%}
@@ -8,6 +12,10 @@
 {% comment %} <li><a href="{%url 'auth-detail' trash.id%}">{{trash}}</a></li> {% endcomment %}
 <li><a href="{%url 'slug-detail' trash.slug%}">{{trash}}</a></li>
 
+
+
 {%endfor%}
 </ul>
+<p>total count is : {{author_count}}</P>
+<p>total avg is : {{total_avg.rating__avg}}</P>
 {%endblock%}
